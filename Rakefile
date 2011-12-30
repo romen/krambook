@@ -66,15 +66,15 @@ end
 task :html do
     require 'rubygems'
     require 'kramdown'
-    require 'filters/markdown_macros'
-    require 'filters/markdown_postmacros'
-    require 'filters/html_template'
-    require 'filters/fix_postmacros'
-    require 'filters/mathjax'
-    require 'filters/links'
+    require_relative 'filters/markdown_macros'
+    require_relative 'filters/markdown_postmacros'
+    require_relative 'filters/html_template'
+    require_relative 'filters/fix_postmacros'
+    require_relative 'filters/mathjax'
+    require_relative 'filters/links'
 
     class KrambookCompile
-        require 'config_html.rb'
+        require_relative 'config_html.rb'
         require 'date'
 
         attr_accessor :filelist
@@ -200,12 +200,12 @@ end
 task :compile do
     require 'rubygems'
     require 'kramdown'
-    require 'filters/markdown_macros'
-    require 'filters/markdown_postmacros'
-    require 'filters/fix_postmacros_latex'
+    require_relative 'filters/markdown_macros'
+    require_relative 'filters/markdown_postmacros'
+    require_relative 'filters/fix_postmacros_latex'
 
     class KrambookCompile
-        require 'config.rb'
+        require_relative 'config.rb'
 
         attr_accessor :filelist
 
