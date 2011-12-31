@@ -11,7 +11,8 @@ You use a markdown syntax and the book can then be generated:
 
 ## Why this project?
 
-### Markdown is easier to read than %latex
+POSTMACRO(heading_latex) = LATEX: \LaTeX HTML: <span style="text-transform: uppercase">L<sup style="vertical-align: 0.15em; margin-left: -0.36em; margin-right: -0.15em; font-size: .85em">a</sup>T<sub style="vertical-align: -0.5ex; margin-left: -0.1667em; margin-right: -0.125em; font-size: 1em">e</sub>X</span> ENDMACRO
+### Markdown is easier to read than %heading_latex
 
 The best typesetting system I know is [%latex](http://latex-project.org).
 Unfortunately %latex was created a long time ago and its syntax is full of backslashes. Here is an example of a standard minimal %latex document:
