@@ -32,9 +32,9 @@ mkdir $projectName/{tmp,site,content}
 (($?)) && {
     print -- "something went wrong creation of 'tmp,site,content' dir"
 }>&2
-cp $krambookDir/content/00_Macros.md $projectName/content/
+cp $krambookDir/content/00_Macros.hidden.md $projectName/content/
 
->$projectName/content/10_Introduction.md <<END
+>$projectName/content/01_Introduction.md <<END
 # Congratulation
 
 You've configured correctly krambook. You can find informations on

@@ -126,9 +126,7 @@ task :html do
             # puts "READ: " + txt
             txt.sub!( /<!-- INCLUDES -->/ ) do
                     @filelist.map do |source,dest| 
-                        if File::basename(source) == '00_Macros.md'
-                            ""
-                        elsif File::basename(source) =~ /\.hide\./
+                        if File::basename(source) =~ /\.hidden\./
                             ""
                         else
                             %{<div class="block">
@@ -164,16 +162,28 @@ task :html do
 
                 # read and compile in LaTeX the .md file
                 templateindex=1
-                if (i+1)<@filelist.size
-                    @postfilters[templateindex].nextURL = '/' + @filelist[i + 1][1].gsub('site/','')
-                else
-                    @postfilters[templateindex].nextURL = "#"
-                end
-                if (i-1)>=0
-                    @postfilters[templateindex].prevURL = '/' + @filelist[i - 1][1].gsub('site/','')
-                else
-                    @postfilters[templateindex].prevURL = "#"
-                end
+                @postfilters[templateindex].nextURL =
+                    if (i+1)<@filelist.size
+                        nexturl = @filelist[i + 1][1].gsub('site/','')
+                        if (nexturl =~ /\.hidden\./)
+                            "#"
+                        else
+                            nexturl
+                        end
+                    else
+                        "#"
+                    end
+                @postfilters[templateindex].prevURL =
+                    if (i-1)>=0
+                        prevurl = @filelist[i - 1][1].gsub('site/','')
+                        if (prevurl =~ /\.hidden\./)
+                            "#"
+                        else
+                            prevurl
+                        end
+                    else
+                        "#"
+                    end
                 text=compile_text( File.new(source,"r").read )
 
                 # create directory if necessary
