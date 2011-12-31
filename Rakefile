@@ -294,14 +294,16 @@ task :compile do
             # launch the xelatex process
             system("cp -rf include tmp/")
 
-            system("cd tmp; xelatex #{@pdfname}; cd ..")
-            # on Ubuntu replace by
-            # system("gnome-open #{@pdfname}.pdf")
+            Dir.chdir("tmp") do
+                2.times { system("xelatex #{@pdfname}") }
 
-            system("\\cp -f tmp/#{@pdfname}.pdf #{@pdfname}.pdf")
+                # open the pdf
+                system("open #{@pdfname}.pdf")
+                # on Ubuntu replace by
+                # system("gnome-open #{@pdfname}.pdf")
+            end
 
-            # open the pdf
-            system("open tmp/#{@pdfname}.pdf")
+
         end
     end
     KrambookCompile.new.run
