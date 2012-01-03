@@ -1,17 +1,25 @@
 % Author Yann Esposito©2010
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass[10pt,oldfontcommands]{memoir}
-\renewcommand{\tt}{\ttfamily}
+\documentclass[10pt,oneside,a5paper]{memoir}
+\renewcommand{\tt}{\protect\ttfamily}
 \renewcommand{\it}{\itshape}
 
 % -- XeLaTeX --
 \XeTeXdefaultencoding utf-8
-\usepackage{xltxtra,fontspec,xunicode}
+\usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
+\defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
+\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
+\usepackage{xltxtra} % Extra customizations for XeLaTeX
+
+% -- Language --
+\usepackage{polyglossia}
+\setmainlanguage{italian}
+\setotherlanguage[variant=british]{english}
 
 % -- Kramdown necessary includes --
 \usepackage{listings}
-\usepackage{hyperref}
+\usepackage[xetex]{hyperref}
 % \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}

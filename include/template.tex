@@ -1,18 +1,21 @@
 \include{include/main}
 
-% -- Personal style --
-% -- Comment the following line if you haven't 
-% -- Hoefler Text font installed on your system
-\setmainfont{Hoefler Text}
-
 % colors
-\usepackage{color}
+\usepackage{xcolor}
 \definecolor{italiccolor}{rgb}{0.4,0.4,0.4}
 \definecolor{boxcolor}{rgb}{0.96,0.96,0.96}
 
 % Make italic and emphasis text gray
-\renewcommand{\textit}[1]{\textcolor{italiccolor}{\it #1}}
-\renewcommand{\emph}[1]{\textcolor{italiccolor}{\em #1}}
+\defaultfontfeatures{
+    Mapping         = tex-text,    % to support TeX conventions like ``---''
+    ItalicFeatures  = {Color = italiccolor},
+    SlantedFeatures = {Color = italiccolor}
+    }
+
+% -- Personal style --
+% -- Comment the following line if you haven't
+% -- Hoefler Text font installed on your system
+\setmainfont[SlantedFont={* Italic}]{Hoefler Text}
 
 % -- Redefinition of memoir chapters --
 %
@@ -41,6 +44,9 @@
 % -- Hyperref setup --
 \definecolor{linkcolor}{rgb}{0.4,0.0,0.0}
 \hypersetup{
+    pdfpagemode={UseOutlines},
+    bookmarksopen,
+    pdfstartview={FitH},
     colorlinks=true, %
     linkcolor=linkcolor, %
     urlcolor=linkcolor, %
