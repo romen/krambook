@@ -5,10 +5,14 @@ class RESandBox
         @attrs = {}
         attrs.strip.split.each do |a|
             k,v = a.split("=")
-            @attrs.store(k,v)
+            @attrs.store(k.intern,v)
+        end unless attrs.nil?
+
+        if @attrs[:select].nil?
+            @attrs[:select] = 'both'
         end
 
-        @body  = body
+        @body  = body.strip unless body.nil?
     end
 
     def eval(code)
@@ -41,7 +45,14 @@ class RESandBox
         #puts "b='#{@body}'"
         #puts "out='#{out}'"
 
-        format_body+format_out(out)
+        case @attrs[:select].downcase
+        when 'source', 'body' then
+            format_body
+        when 'output','out' then
+            format_out(out)
+        else
+            format_body+format_out(out)
+        end
     end
 
 end
@@ -53,8 +64,10 @@ class RubyEval
     end
 
     def run(content)
-        content.gsub(/{::rubyeval([^}]*)}(.*){:\/rubyeval}/m) do |m|
-            RESandBox.new(m, $1.strip, $2.strip).run
+        content.gsub(/{::rubyeval( (.*?))?}(.*?){:\/rubyeval}/m) do |m|
+            #puts "\t$2:\t"+$2 unless $2.nil?
+            #puts "\t$3:\t"+$3 unless $3.nil?
+            RESandBox.new(m, $2, $3).run
         end
     end
 end
