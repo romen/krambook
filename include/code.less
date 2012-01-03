@@ -1,0 +1,24 @@
+@code_bg: #e0eeff;
+
+code {
+    background-color: @code_bg;
+}
+
+div.ruby {
+    background-color: @code_bg;
+    .CodeRay {
+        background-color: transparent;
+    }
+}
+
+pre.output {
+    background-color: #ccc;
+    code {
+        background-color: transparent;
+    }
+}
+
+h1>code, h2>code {
+    background-color: transparent;
+}
+

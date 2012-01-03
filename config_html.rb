@@ -18,3 +18,12 @@
 @template_file="include/toc_template.html"
 @general_template="include/template.html"
 
+@kramdown_opts={
+    :coderay_wrap              => 'div',
+    :coderay_line_numbers      => 'table',
+    :coderay_line_number_start => 1,
+    :coderay_tab_width         => 4,
+    :coderay_bold_every        => 10,
+    :coderay_css               => 'class'
+}
+

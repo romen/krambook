@@ -81,6 +81,7 @@ task :html do
 
         def initialize
 
+            @kramdown_opts={}
             eval File.new('config_html.rb','r').read
 
             @prefilters=[]
@@ -113,7 +114,7 @@ task :html do
 
             # compile to latex
             # puts tmp
-            tmp=Kramdown::Document.new(tmp).to_html
+            tmp=Kramdown::Document.new(tmp, @kramdown_opts).to_html
 
             # post filters
             @postfilters.each{ |f| tmp=f.run(tmp) }
@@ -227,7 +228,7 @@ task :compile do
             end
 
             # compile to latex
-            tmp=Kramdown::Document.new(tmp, :latex_headers => %w(chapter section subsection paragraph subparagraph subsubparagraph)).to_latex
+            tmp=Kramdown::Document.new(tmp, @kramdown_opts).to_latex
 
             # post filters
             @postfilters.each{ |f| tmp=f.run(tmp) }
@@ -253,7 +254,12 @@ task :compile do
 
         def initialize
 
+            @kramdown_opts={}
             eval File.new('config.rb','r').read
+            if @kramdown_opts[:latex_header].nil?
+                @kramdown_opts.merge!({:latex_headers =>
+                  %w(chapter section subsection paragraph subparagraph subsubparagraph)})
+            end
 
             @prefilters=[]
             @prefilters<<=MarkdownMacros.new

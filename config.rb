@@ -31,3 +31,5 @@
 # look at include/template.tex for example
 @template_file="include/template.tex"
 
+@kramdown_opts={}
+
