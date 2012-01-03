@@ -16,7 +16,7 @@ class RESandBox
     end
 
     def eval(code)
-        pipe = IO.popen(["ruby",{ STDERR => STDOUT }], "r+")
+        pipe = IO.popen(["ruby", :err => [:child, :out]], "r+")
         pipe.puts code
         pipe.close_write
 
