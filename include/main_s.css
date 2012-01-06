@@ -19,6 +19,8 @@ $secondTextColor: #666666
 $codeBlockColor: $mainBackgroundColor
 $codeBlockBackgroundColor: $behindColor
 
+@import url(http://fonts.googleapis.com/css?family=Lato:300,300italic|Droid+Sans+Mono|Tinos:400,400italic,700,700italic);
+
 =mainColor
   color: $behindColor
   background:
@@ -119,7 +121,7 @@ ol li ul, ol li ol, ul li ol, ul li ul
   margin: 1em 1em
 
 body, h1, h2, h3, h4, #entete, .tag
-  font-family: Georgia, Palatino, "Century Schoolbook L", "Times New Roman", Times, serif
+  font-family: 'Tinos', serif
   line-height: 1.4em
 
 pre
@@ -129,12 +131,12 @@ pre
 
 pre, code
   font:
-    family: monaco, monospace
+    family: 'Droid Sans Mono', monospace
     size: .8em
 
 p code
   font:
-    family: monospace
+    family: 'Droid Sans Mono', monospace
     size: 1em
 
 p
@@ -389,7 +391,7 @@ $contentMargin: 0em
 $fontcorps: 1.25
 
 .corps
-  font-family: Georgia, Palatino, "Century Schoolbook L", "Times New Roman", Times, serif
+  font-family: 'Tinos', serif
   font-size: #{$fontcorps}em
   line-height: 1.6em
   text-align: justify
@@ -715,7 +717,7 @@ a:hover .nicer
 
 .nicer
   color: $lighterText
-  font-family: "Lucida Grande", Tahoma
+  font-family: 'Lato', sans-serif
 
 
 .block
