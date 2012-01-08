@@ -1,0 +1,67 @@
+/* Derived from http://github.com/michaelhue/keyscss */
+
+.user-select(@arg) {
+    -moz-user-select: @arg;
+    -webkit-user-select: @arg;
+    user-select: @arg;
+}
+
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.box-shadow (@arg) {
+    -moz-box-shadow: @arg;
+    -webkit-box-shadow: @arg;
+    box-shadow: @arg;
+}
+
+/* Base style, essential for every key. */
+kbd, .kbd {
+    display: inline;
+    display: inline-block;
+    min-width: 1em;
+    padding: .2em .3em;
+    font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    .rounded-corners(.3em);
+    border: none;
+    cursor: default;
+    .user-select(none);
+    margin: 0 .2em;
+}
+kbd[title], .kbd[title] {
+    cursor: help;
+}
+
+/* Dark style for display on light background. */
+.kbd_dark () {
+    background: rgb(80, 80, 80);
+    background: -moz-linear-gradient(top, rgb(60, 60, 60), rgb(80, 80, 80));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(60, 60, 60)), to(rgb(80, 80, 80)));
+    color: rgb(250, 250, 250);
+    text-shadow: -1px -1px 0 rgb(70, 70, 70);
+    .box-shadow(~"inset 0 0 1px rgb(150, 150, 150), inset 0 -.05em .4em rgb(80, 80, 80), 0 .1em 0 rgb(30, 30, 30), 0 .1em .1em rgba(0, 0, 0, .3)");
+}
+kbd.dark, .dark-keys kbd, .kbd.dark, .dark-keys .kbd {
+    .kbd_dark();
+}
+
+/* Light style for display on dark background. */
+.kbd_light () {
+    background: rgb(250, 250, 250);
+    background: -moz-linear-gradient(top, rgb(210, 210, 210), rgb(255, 255, 255));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(210, 210, 210)), to(rgb(255, 255, 255)));
+    color: rgb(50, 50, 50);
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    .box-shadow( ~"inset 0 0 1px rgb(255, 255, 255), inset 0 0 .4em rgb(200, 200, 200), 0 .1em 0 rgb(130, 130, 130), 0 .11em 0 rgba(0, 0, 0, .4), 0 .1em .11em rgba(0, 0, 0, .9)");
+}
+/* Default */
+kbd, .kbd,
+kbd.light, .light-keys kbd, .kbd.light, .light-keys .kbd {
+    .kbd_light();
+}
+
