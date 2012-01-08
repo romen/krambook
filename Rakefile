@@ -205,6 +205,7 @@ task :html do
             process_template
 
             system("cp -rf include site/")
+            system("cp -rf content/images site/")
         end
     end
     KrambookCompile.new.run
