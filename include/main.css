@@ -72,8 +72,6 @@ blockquote {
   blockquote a:hover {
     color: #d50000; }
   blockquote strong, blockquote b, blockquote i, blockquote em {
-    font-weight: normal;
-    font-style: normal;
     color: #111111; }
 
 abbr,
@@ -314,8 +312,6 @@ ul.horizontal {
   .intro a:hover, .resume a:hover {
     color: #d50000; }
   .intro strong, .intro b, .intro i, .intro em, .resume strong, .resume b, .resume i, .resume em {
-    font-weight: normal;
-    font-style: normal;
     color: #111111; }
 
 #afterheader > h1 {
@@ -638,7 +634,6 @@ a.return {
   padding: 0; }
 
 strong, b, i, em {
-  font-weight: normal;
   color: #888888; }
   strong a, b a, i a, em a {
     color: #111111; }

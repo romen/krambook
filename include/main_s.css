@@ -41,9 +41,6 @@ $codeBlockBackgroundColor: $behindColor
   a:hover
     color: $revealColor
   strong, b, i, em
-    font:
-      weight: normal
-      style: normal
     color: $behindColor
 
 =secondColor
@@ -692,7 +689,6 @@ a.return
   padding: 0
 
 strong, b, i, em
-  font-weight: normal
   color: $highlightColor
   a
     color: $mainTextColor
