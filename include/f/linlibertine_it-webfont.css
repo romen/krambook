@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('linlibertine_it-4.2.6-webfont.eot');
+  src: local('Linux Libertine'), url('linlibertine_it-4.2.6-webfont.woff') format('woff'), url('linlibertine_it-4.2.6-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+

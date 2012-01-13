@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Essays 1743';
+  src: local('Essays 1743'), url('essays1743-2.000-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Essays 1743';
+  src: local('Essays 1743'), url('essays1743-2.000-bolditalic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Essays 1743';
+  src: local('Essays 1743'), url('essays1743-2.000-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Essays 1743';
+  src: local('Essays 1743'), url('essays1743-2.000-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

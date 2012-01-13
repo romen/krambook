@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('linlibertine_bd-4.1.5-webfont.eot');
+  src: local('Linux Libertine'), url('linlibertine_bd-4.1.5-webfont.woff') format('woff'), url('linlibertine_bd-4.1.5-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('linlibertine_it-4.2.6-webfont.eot');
+  src: local('Linux Libertine'), url('linlibertine_it-4.2.6-webfont.woff') format('woff'), url('linlibertine_it-4.2.6-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('linlibertine_re-4.7.5-webfont.eot');
+  src: local('Linux Libertine'), url('linlibertine_re-4.7.5-webfont.woff') format('woff'), url('linlibertine_re-4.7.5-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

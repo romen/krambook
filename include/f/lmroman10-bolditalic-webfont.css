@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'LatinModernRoman10BoldItalic';
+  src: url('lmroman10-bolditalic-webfont.eot');
+  src: local('☺'), url('lmroman10-bolditalic-webfont.woff') format('woff'), url('lmroman10-bolditalic-webfont.ttf') format('truetype'), url('lmroman10-bolditalic-webfont.svg#webfontVm6n5sgb') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
