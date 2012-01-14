@@ -509,6 +509,9 @@ ul.horizontal li {
   width: 84%;
   margin-left: 8%;
 }
+.corps aside em {
+  font-style: normal;
+}
 img.clean {
   border: none;
 }
