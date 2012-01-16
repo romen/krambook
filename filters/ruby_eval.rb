@@ -85,6 +85,7 @@ class RESandBox
             if pipe #father
                 out = pipe.read
             else #child
+                srand
                 puts realExecuteCode(code,input)
             end
         end
