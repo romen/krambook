@@ -80,22 +80,24 @@ h4 {
   line-height: 1.4em;
   font-variant: small-caps;
 }
-h1 code,
-h2 code,
-h3 code,
-h4 code {
-  font-variant: normal;
-}
 pre {
   padding: 1em;
   line-height: 1.2em;
   font-family: 'Droid Sans Mono', monospace;
   font-size: .8em;
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
   overflow: hidden;
 }
 code {
   font-family: 'Droid Sans Mono', monospace;
   font-size: .8em;
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
 }
 p {
   margin-bottom: 1.2em;

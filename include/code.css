@@ -63,6 +63,7 @@ div.ruby .CodeRay {
 }
 pre.output {
   background-color: #ccc;
+  color: #000070;
 }
 pre.output code {
   background-color: transparent;
