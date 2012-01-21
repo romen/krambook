@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Linux Libertine';
   src: url('linlibertine_bd-4.1.5-webfont.eot');
-  src: local('Linux Libertine'), url('linlibertine_bd-4.1.5-webfont.woff') format('woff'), url('linlibertine_bd-4.1.5-webfont.ttf') format('truetype');
+  src: local('Linux Libertine'), url('linlibertine_bd-5.1.3-webfont.woff') format('woff'), url('linlibertine_bd-5.1.3-webfont.ttf') format('truetype'), url('linlibertine_bd-5.1.3-webfont.svg#LinLibertineOB') format('svg');
   font-weight: bold;
   font-style: normal;
 }
