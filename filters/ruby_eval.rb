@@ -1,7 +1,7 @@
 require 'stringio'
 
 class RESandBox
-    @@INPUT = "%%%'f'o'o'"
+    @@INPUT__YMEDXND1 = "%%%'f'o'o'"
     def initialize(m, attrs, body)
         @m     = m
 
@@ -24,11 +24,11 @@ class RESandBox
         @body  = body.strip unless body.nil?
     end
 
-    def realExecuteCode (code, input)
+    def realExecuteCode (__yMeDXnd1__code, __yMeDXnd1__input)
         # Wrap code to catch errors and to stop SystemExit.
-        code = <<-END_CODE
+        __yMeDXnd1__code = <<-END_CODE
           begin
-            #{code}
+            #{__yMeDXnd1__code}
           rescue SystemExit
           rescue Exception => error
             puts error.inspect
@@ -37,15 +37,15 @@ class RESandBox
 
         strIO = StringIO.new
 
-        unless input.empty?
-            input = StringIO.new(input, 'r')
+        unless __yMeDXnd1__input.empty?
+            __yMeDXnd1__input = StringIO.new(__yMeDXnd1__input, 'r')
             class << strIO;
                 self;
             end.module_eval do
                 ['gets', 'getc', 'read'].each do |meth|
                     define_method(meth) do |*params|
-                        inStr = input.method(meth).call(*params)
-                        puts @@INPUT+inStr.chomp+(@@INPUT.reverse) # Echo input
+                        inStr = __yMeDXnd1__input.method(meth).call(*params)
+                        puts @@INPUT__YMEDXND1+inStr.chomp+(@@INPUT__YMEDXND1.reverse) # Echo input
                         inStr
                     end
                 end
@@ -66,7 +66,7 @@ class RESandBox
         end
 
         begin
-            strIO.instance_eval code
+            strIO.instance_eval __yMeDXnd1__code
         rescue Exception => error # Catch parse errors.
             return error.inspect
         ensure
@@ -102,7 +102,7 @@ class RESandBox
 
     def format_out(out)
         o  = '<pre class="output">'+"\n"
-        o << out.gsub(/#{@@INPUT}(.*?)#{@@INPUT.reverse}\n*/m) do
+        o << out.gsub(/#{@@INPUT__YMEDXND1}(.*?)#{@@INPUT__YMEDXND1.reverse}\n*/m) do
             '<span class="REinput">'+$1+"</span>\n"
         end
         o << '</pre>'
