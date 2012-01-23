@@ -257,7 +257,7 @@ body > #entete {
   left: 0;
   top: 0.5em;
   width: 100%;
-  min-width: 958px;
+  min-width: 766px;
   z-index: 8000;
   padding-bottom: 1em;
   margin-bottom: 3em;
@@ -351,7 +351,7 @@ ul.horizontal li {
   margin-top: 0;
   position: relative;
   clear: both;
-  width: 960px;
+  width: 768px;
 }
 #content > #choix {
   margin-top: 1em;
