@@ -116,7 +116,10 @@ hr {
 
 ul { list-style: square; }
 ol,ul { padding-left: 0; }
-ol li, ul li { margin: 1em 0; }
+ol li, ul li {
+    margin: 1em 0;
+    margin-left: 2em;
+}
 ol li ul, ol li ol, ul li ol, ul li ul {
     margin: 1em 1em;
 }
@@ -436,7 +439,6 @@ ul.horizontal {
     .fontcorps;
     line-height: 1.6em;
     text-align: justify;
-    text-align: left;
     padding: @VPadCorps 3em;
     margin: 0 @HMarginCorps;
     border-bottom: 1px @lighterColorBorderBottom solid;
@@ -460,6 +462,8 @@ ul.horizontal {
         .fancy_font;
         width: 84%;
         margin-left: 8%;
+        border-top: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
         em {
             font-style: normal;
         }
@@ -749,6 +753,8 @@ a.return {
 }
 
 .footnotes {
+    margin-top: 3em;
+    border-top: 1px solid #E5E5E5;
     font-size: 0.9em;
     ol { margin-left: 0; }
     p {

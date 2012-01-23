@@ -60,6 +60,7 @@ ol, ul {
 }
 ol li, ul li {
   margin: 1em 0;
+  margin-left: 2em;
 }
 ol li ul,
 ol li ol,
@@ -478,7 +479,6 @@ ul.horizontal li {
   font-size: 1.25em;
   line-height: 1.6em;
   text-align: justify;
-  text-align: left;
   padding: 3em 3em;
   margin: 0 0;
   border-bottom: 1px #cccccc solid;
@@ -510,6 +510,8 @@ ul.horizontal li {
   font-family: "Essays 1743", serif;
   width: 84%;
   margin-left: 8%;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
 }
 .corps aside em {
   font-style: normal;
@@ -780,6 +782,8 @@ a.return:hover {
   color: #888888;
 }
 .footnotes {
+  margin-top: 3em;
+  border-top: 1px solid #E5E5E5;
   font-size: 0.9em;
 }
 .footnotes ol {
