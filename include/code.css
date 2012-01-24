@@ -57,6 +57,8 @@ code {
 }
 div.ruby {
   background-color: #e0eeff;
+  width: 100%;
+  overflow-x: auto;
 }
 div.ruby .CodeRay {
   background-color: transparent;
@@ -64,6 +66,7 @@ div.ruby .CodeRay {
 pre.output {
   background-color: #ccc;
   color: #000070;
+  overflow-x: auto;
 }
 pre.output code {
   background-color: transparent;
