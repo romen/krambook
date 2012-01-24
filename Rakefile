@@ -83,10 +83,12 @@ task :html do
                         if File::basename(source) =~ /\.hidden\./
                             ""
                         else
+                            chap_name = File::basename(dest,'.html').sub(/^.+?_/,'')
+                            chap_name.gsub!(/_/,' ')
                             %{<div class="block">
                                 <h3>
                                     <a href="#{dest.sub(/^site\//,'')}">
-                                        #{File::basename(dest,'.html').sub(/^\d+_/,'')}
+                                        #{chap_name}
                                         <span class="nicer">»</span>
                                     </a>
                                 </h3>
